@@ -1,48 +1,74 @@
-<!doctype html>
-<html lang="id">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>BrandKeren — Bikin Website Kece</title>
-  <meta name="description" content="Template web modern dengan desain keren, aesthetic, dan responsif. Cocok untuk portofolio, produk digital, atau bisnis startup." />
-  <link rel="icon" href="favicon.ico" />
-  <style>
-    :root{
-      --bg: #0f0f17;
-      --card: #1c1c29;
-      --muted: #a0a3b1;
-      --text: #f5f5ff;
-      --brand: #ff6ec7;
-      --brand-2:#6eb6ff;
-      --ring: rgba(255,110,199,.4);
-      --shadow: 0 10px 30px rgba(0,0,0,.45);
-      --radius: 20px;
-      --radius-lg: 32px;
-      --maxw: 1200px;
-    }
-    body{margin:0;font-family: 'Poppins', sans-serif;background:linear-gradient(160deg,#0f0f17,#1a1a27);color:var(--text);}
-    a{text-decoration:none;color:inherit}
-    .container{max-width:var(--maxw);margin:auto;padding:24px}
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Simple Keren</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 min-h-screen flex flex-col">
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 bg-white/10 backdrop-blur-md shadow-lg">
+    <h1 class="text-2xl font-bold text-white">Brand<span class="text-yellow-300">Name</span></h1>
+    <ul class="hidden md:flex space-x-8 text-white font-medium">
+      <li><a href="#home" class="hover:text-yellow-300">Home</a></li>
+      <li><a href="#about" class="hover:text-yellow-300">About</a></li>
+      <li><a href="#services" class="hover:text-yellow-300">Services</a></li>
+      <li><a href="#contact" class="hover:text-yellow-300">Contact</a></li>
+    </ul>
+    <button class="md:hidden text-white text-2xl"><i class="fa-solid fa-bars"></i></button>
+  </nav>
 
-    header{position:sticky;top:0;background:rgba(15,15,23,.7);backdrop-filter:blur(10px);z-index:50}
-    .nav{display:flex;justify-content:space-between;align-items:center}
-    .brand{font-size:1.5rem;font-weight:700;background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;color:transparent}
-    .links{display:flex;gap:1.2rem}
-    .links a{color:var(--muted);transition:.3s}
-    .links a:hover{color:var(--brand)}
+  <!-- Hero Section -->
+  <section id="home" class="flex flex-col justify-center items-center text-center flex-grow px-6">
+    <h2 class="text-4xl md:text-6xl font-extrabold text-white drop-shadow-lg">Welcome to <span class="text-yellow-300">Awesome Web</span></h2>
+    <p class="text-lg md:text-xl text-white mt-4 max-w-2xl">Sebuah template simple tapi kece, dibuat dengan Tailwind CSS biar modern dan gampang di-custom.</p>
+    <a href="#about" class="mt-8 px-6 py-3 bg-yellow-300 text-black font-semibold rounded-full shadow-lg hover:scale-105 transition">Get Started</a>
+  </section>
 
-    .btn{display:inline-block;padding:.9rem 1.3rem;border-radius:999px;font-weight:600;transition:.3s;cursor:pointer}
-    .btn.primary{background:linear-gradient(135deg,var(--brand),var(--brand-2));color:#0f0f17;box-shadow:var(--shadow)}
-    .btn.primary:hover{transform:scale(1.05)}
-    .btn.ghost{border:1px solid var(--muted);color:var(--text)}
-    .btn.ghost:hover{background:rgba(255,255,255,.05)}
+  <!-- About Section -->
+  <section id="about" class="bg-white py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold text-indigo-600">About Us</h3>
+    <p class="mt-4 text-gray-700 max-w-2xl mx-auto">Kami menyediakan template website modern, simple, dan mudah dipakai untuk berbagai kebutuhan. Bisa dipakai untuk portfolio, company profile, atau landing page.</p>
+  </section>
 
-    .hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:40px;min-height:90vh;padding:60px 0}
-    .hero h1{font-size:clamp(2.5rem,6vw,4rem);line-height:1.2;margin:0 0 20px}
-    .hero p{color:var(--muted);font-size:1.1rem;max-width:500px}
-    .hero-img{border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)}
-    .hero-img img{width:100%;display:block}
+  <!-- Services Section -->
+  <section id="services" class="bg-gradient-to-r from-purple-500 to-indigo-600 py-20 px-6 text-white">
+    <h3 class="text-3xl font-bold text-center">Our Services</h3>
+    <div class="mt-10 grid grid-cols-1 md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div class="bg-white/10 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition">
+        <i class="fa-solid fa-code text-4xl mb-4"></i>
+        <h4 class="text-xl font-semibold">Web Development</h4>
+        <p class="mt-2 text-sm">Membangun website modern, cepat, dan responsif sesuai kebutuhanmu.</p>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition">
+        <i class="fa-solid fa-paintbrush text-4xl mb-4"></i>
+        <h4 class="text-xl font-semibold">UI/UX Design</h4>
+        <p class="mt-2 text-sm">Desain elegan dan user-friendly untuk pengalaman terbaik pengunjung.</p>
+      </div>
+      <div class="bg-white/10 rounded-2xl p-6 text-center shadow-lg hover:scale-105 transition">
+        <i class="fa-solid fa-bullhorn text-4xl mb-4"></i>
+        <h4 class="text-xl font-semibold">Digital Marketing</h4>
+        <p class="mt-2 text-sm">Strategi promosi online untuk meningkatkan branding dan engagement.</p>
+      </div>
+    </div>
+  </section>
 
-    section{padding:60px 0}
-    .section-title{text-align:center;font-size:2rem;margin-bottom:16px;background:linear-gradient(135deg,var(--brand),var(--brand-2));-webkit-background-clip:text;color:transparent}
-    .muted{text-align:center;color:var(--muted);margin-bottom:40px
+  <!-- Contact Section -->
+  <section id="contact" class="bg-white py-20 px-6 text-center">
+    <h3 class="text-3xl font-bold text-indigo-600">Contact Us</h3>
+    <form class="mt-6 max-w-lg mx-auto flex flex-col space-y-4">
+      <input type="text" placeholder="Your Name" class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <input type="email" placeholder="Your Email" class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400">
+      <textarea placeholder="Your Message" rows="4" class="p-3 border rounded-lg focus:outline-none focus:ring-2 focus:ring-indigo-400"></textarea>
+      <button type="submit" class="px-6 py-3 bg-indigo-600 text-white rounded-full shadow hover:bg-indigo-700 transition">Send Message</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-indigo-700 text-white text-center py-6">
+    <p>&copy; 2025 BrandName. All rights reserved.</p>
+  </footer>
+</body>
+</html>
